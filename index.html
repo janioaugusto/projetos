@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secretaria da Controladoria Geral do Estado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="p-3 mb-2 bg-dark text-primary"><h2><center><b>Formulário de Satisfação</b></center> </h2></div>
+       <div class="container mb-15">
+          <form action="/Salvar">
+          </br>
+              <h5><b>1. Você se identifica como: </b></h5>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="identifica1" value="1" v-model="INTIPOUSUARIO" name="identifica" required>
+                <label class="custom-control-label" for="identifica1">Servidor Público do Estado de Pernambuco</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="identifica2" value="2" v-model="INTIPOUSUARIO "name="identifica" required>
+                <label class="custom-control-label" for="identifica2">Cidadão Usuário</label>
+            </div>
+            <br>
+            <br>
+              <h5><b>2. Como você foi informado dos serviços da Ouvidoria:</b> </h5>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="informado1" value="1" v-model="INCOMOSOUBEOUVIDORIA" name="informado" required>
+                <label class="custom-control-label" for="informado1">Amigos</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="informado2" value="2" v-model="INCOMOSOUBEOUVIDORIA" name="informado"required>
+                <label class="custom-control-label" for="informado2">Órgãos do Governo</label>
+            <div class="custom-control custom-radio custom-control">
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="informado3" value="3" v-model="INCOMOSOUBEOUVIDORIA" name="informado" required>
+                <label class="custom-control-label" for="informado3">Panfleto/Cartazes</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="informado4" value="4" v-model="INCOMOSOUBEOUVIDORIA" name="informado" required>
+                <label class="custom-control-label" for="informado4">Internet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="informado5" value="5" v-model="INCOMOSOUBEOUVIDORIA" name="informado" required>
+                <label class="custom-control-label" for="informado5">Mídia(jornais,televisão,rádio)</label>
+            </div>
+            </div>
+            </br>
+            <br>
+              <h5><b>3. A qualidade da resposta recebida foi:</b> </h5>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="resposta1" value="1" v-model="INQUALIDADERESPOSTA" name="resposta" required>
+                <label class="custom-control-label" for="resposta1">Satisfatória</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="resposta2" value="2" v-model="INQUALIDADERESPOSTA" name="resposta" required>
+                <label class="custom-control-label" for="resposta2">Parcialmente Satisfatória</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="resposta3" value="3" v-model="INQUALIDADERESPOSTA" name="resposta" required>
+                <label class="custom-control-label" for="resposta3">Insatisfatória</label>
+            </div>
+            <br>
+             <br>
+              <h5><b>4. O papel da Ouvidoria é: </b></h5>
+             <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="papel1" value="1" v-model="INPAPELOUVIDORIA" name="papel" required>
+                <label class="custom-control-label" for="papel1">Importante</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="papel2" value="2" v-model="INPAPELOUVIDORIA" name="papel" required>
+                <label class="custom-control-label" for="papel2">Muito Importante</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="papel3" value="3" v-model="INPAPELOUVIDORIA" name="papel" required>
+                <label class="custom-control-label" for="papel3">Pouco Importante</label>
+            </div>
+            <br>
+            <br>
+              <h5><b>5. Na sua opinião o tempo, o tempo para obtenção da resposta foi: </b></h5>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="tempo1" value="1" v-model="INTEMPORESPOSTA" name="tempo" required>
+                <label class="custom-control-label" for="tempo1">Rápido</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="tempo2" value="2" v-model="INTEMPORESPOSTA" name="tempo" required>
+                <label class="custom-control-label" for="tempo2">Normal</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="tempo3" value="3" v-model="INTEMPORESPOSTA" name="tempo" required>
+                <label class="custom-control-label" for="tempo3">Demorado</label>
+            </div>
+            <br>
+            <br>
+
+              <h5><b>6. Caso necessário,você utilizaria novamente os serviços da Ouvidoria?</b> </h5>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="utilizaria1" value="1" v-model="INREUTILIZAOUVIDORIA" name="utilizaria" required>
+                <label class="custom-control-label" for="utilizaria1">Sim</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="utilizaria2" value="2" v-model="INREUTILIZAOUVIDORIA" name="utilizaria" required>
+                <label class="custom-control-label" for="utilizaria2">Não</label>
+            </div>
+            <br>
+            <br>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="reset" class="btn btn-danger">Cancelar</button>
+    </div>
+</form>
+</div>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            INTIPOUSUARIO:[],
+            INCOMOSOUBEOUVIDORIA:[],
+            INQUALIDADERESPOSTA:[],
+            INPAPELOUVIDORIA:[],
+            INTEMPORESPOSTA:[],
+            INREUTILIZAOUVIDORIA:[]
+            }
+        });
+
+</script>
+
+</body>
+</html>
